@@ -11,7 +11,7 @@ O React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir i
 
 ## npm
 
-O **npm (Node Package Manager)** é um gerenciador de pacotes para o ambiente Node.js. Ele permite que você instale, atualize e gerencie bibliotecas e dependências de JavaScript em seus projetos. O npm é uma ferramenta essencial para desenvolvedores que trabalham com JavaScript, pois facilita a inclusão de pacotes de código já prontos, como o React e suas dependências.
+O **npm (Node Package Manager)** é um gerenciador de pacotes para o ambiente *Node.js*. Ele permite que você instale, atualize e gerencie bibliotecas e dependências de *JavaScript* em seus projetos. O npm é uma ferramenta essencial para desenvolvedores que trabalham com *JavaScript*, pois facilita a inclusão de pacotes de código já prontos, como o *React* e suas dependências.
 
 #### Aqui estão algumas funcionalidades principais do npm:
 
@@ -23,6 +23,6 @@ O **npm (Node Package Manager)** é um gerenciador de pacotes para o ambiente No
 
 - **Publicação de Pacotes:** Você também pode criar e publicar seus próprios pacotes no repositório npm, tornando-os disponíveis para a comunidade.
 
-Ao iniciar um projeto com React, você normalmente usará
+Ao iniciar um projeto com React, você normalmente usará o npm para instalar o React e suas bibliotecas associadas.
 
 ---
