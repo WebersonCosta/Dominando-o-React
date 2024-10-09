@@ -83,3 +83,11 @@ return (
 ```
 
 ---
+
+## Hooks
+
+Hooks são funções que permitem que você "conecte" o estado (*states*) e outras funcionalidades do React a componentes funcionais.
+
+## estado (*state*)
+
+Em React, "estado" refere-se a dados que podem mudar ao longo do tempo. Quando o estado de um componente muda, o React re-renderiza o componente para refletir essas mudanças.
