@@ -91,3 +91,34 @@ Hooks são funções que permitem que você "conecte" o estado (*states*) e outr
 ## estado (*state*)
 
 Em React, "estado" refere-se a dados que podem mudar ao longo do tempo. Quando o estado de um componente muda, o React re-renderiza o componente para refletir essas mudanças.
+
+## Previous states
+
+No React, cada componente pode ter um estado interno que controla suas características e comportamento. Quando você atualiza o estado de um componente, o React pode precisar saber qual era o estado anterior para calcular o novo estado ou para garantir que a atualização ocorra da maneira esperada. Isso é especialmente importante em situações onde o novo estado depende do estado anterior.
+
+#### Exemplo com Functional Components e Hooks
+
+Você pode usar o hook useState e a função de atualização pode receber uma função que aceita o estado anterior.
+
+```javascript
+
+import React, { useState } from 'react';
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  return (
+    <div>
+      <p>Contador: {count}</p>
+      <button onClick={increment}>Incrementar</button>
+    </div>
+  );
+};
+
+```
+
+---
