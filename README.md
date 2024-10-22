@@ -424,11 +424,11 @@ fetch('URL-da-API')
 
 #### Conceitos Importantes:
 
-URL: O primeiro argumento do fetch() é a URL da API ou recurso que você deseja acessar.
+1. URL: O primeiro argumento do fetch() é a URL da API ou recurso que você deseja acessar.
 
-Resposta (Response): A resposta inicial que o fetch() retorna contém metadados, como status da requisição e headers, mas o corpo da resposta precisa ser processado (normalmente convertido para JSON, que é o formato mais comum para APIs).
+2. Resposta (Response): A resposta inicial que o fetch() retorna contém metadados, como status da requisição e headers, mas o corpo da resposta precisa ser processado (normalmente convertido para JSON, que é o formato mais comum para APIs).
 
-Métodos HTTP: Embora o método padrão seja GET, você pode configurar fetch() para usar outros métodos HTTP como POST, PUT, DELETE, etc., dependendo do que você precisa.
+3. Métodos HTTP: Embora o método padrão seja GET, você pode configurar fetch() para usar outros métodos HTTP como POST, PUT, DELETE, etc., dependendo do que você precisa.
 
 ```javascript
 
@@ -442,7 +442,7 @@ fetch('https://exemplo.com/api', {
 
 ```
 
-Promises: fetch() retorna uma Promise, que permite que você encadeie .then() para lidar com a resposta assíncrona ou .catch() para lidar com erros, como falhas na rede.
+4. Promises: fetch() retorna uma Promise, que permite que você encadeie .then() para lidar com a resposta assíncrona ou .catch() para lidar com erros, como falhas na rede.
 
 #### Exemplo Prático com Fetch API
 
@@ -497,30 +497,32 @@ export default App;
 
 #### Passo a Passo do Exemplo:
 
-useState: Três estados são usados:
+1. useState: Três estados são usados:
 
-dados para armazenar os dados retornados pela API.
-carregando para controlar se os dados estão sendo buscados.
-erro para armazenar qualquer erro que ocorra.
-useEffect: Faz a requisição assim que o componente é montado, graças ao array de dependências vazio ([]).
+- dados para armazenar os dados retornados pela API.
+- carregando para controlar se os dados estão sendo buscados.
+- erro para armazenar qualquer erro que ocorra.
 
-fetch:
+2. useEffect: Faz a requisição assim que o componente é montado, graças ao array de dependências vazio ([]).
 
-Requisição é feita para o endpoint da API https://jsonplaceholder.typicode.com/posts.
-Os dados são convertidos para JSON com response.json() e armazenados no estado dados.
-Caso ocorra um erro, ele é capturado no bloco catch e armazenado no estado erro.
-Renderização Condicional: Exibe uma mensagem de carregamento, uma mensagem de erro ou os dados da API dependendo do estado atual.
+3. fetch:
+
+- Requisição é feita para o endpoint da API https://jsonplaceholder.typicode.com/posts.
+- Os dados são convertidos para JSON com response.json() e armazenados no estado dados.
+- Caso ocorra um erro, ele é capturado no bloco catch e armazenado no estado erro.
+
+4. Renderização Condicional: Exibe uma mensagem de carregamento, uma mensagem de erro ou os dados da API dependendo do estado atual.
 
 #### Vantagens da Fetch API
 
-Simples de usar: A Fetch API tem uma sintaxe concisa e é fácil de aprender.
-Baseada em Promises: Faz com que o código seja mais legível e fácil de manter.
-Nativa do JavaScript: Não requer bibliotecas externas.
+- **Simples de usar:** A Fetch API tem uma sintaxe concisa e é fácil de aprender.
+- **Baseada em Promises:** Faz com que o código seja mais legível e fácil de manter.
+- **Nativa do JavaScript:** Não requer bibliotecas externas.
 
 #### Limitações da Fetch API
 
-Faltam algumas funcionalidades: O fetch() não faz automaticamente a conversão de respostas JSON, e o manuseio de erros é um pouco mais manual.
-Não aborta requisições facilmente: Embora seja possível cancelar uma requisição com AbortController, isso requer um pouco mais de configuração.
+- **Faltam algumas funcionalidades:** O fetch() não faz automaticamente a conversão de respostas JSON, e o manuseio de erros é um pouco mais manual.
+- **Não aborta requisições facilmente:** Embora seja possível cancelar uma requisição com AbortController, isso requer um pouco mais de configuração.
 
 
 ------
