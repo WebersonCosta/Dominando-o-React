@@ -127,7 +127,7 @@ const Counter = () => {
 
 #### Como utilizar adequadamente o *useState* em React
 
-O useState é um [hook](##Hooks) em React que permite adicionar e gerenciar estado em componentes funcionais. Ele retorna um array com dois elementos: o valor do estado atual e uma função para atualizar o estado.
+O useState é um [hook](#Hooks) em React que permite adicionar e gerenciar estado em componentes funcionais. Ele retorna um array com dois elementos: o valor do estado atual e uma função para atualizar o estado.
 
 **Sintaxe básica:**
 
