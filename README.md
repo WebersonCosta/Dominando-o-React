@@ -1,12 +1,12 @@
 # JavaScript
 
-#### Minhas anotações
+**Minhas anotações**
 
 ## Template String
 
 Template strings são definidas usando crases **(`)** em vez de aspas simples **(')** ou duplas **(")**.
 
-### Interpolação de Variáveis
+#### Interpolação de Variáveis
 
 
 ```javacript
@@ -260,7 +260,7 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 ---
 
-# Funções-JavaScript
+## Funções-JavaScript
 
 #### Minhas anotações
 
@@ -269,7 +269,7 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
 
-### Declaração de Funções
+#### Declaração de Funções
 
 1. **Função Declarada (Function Declaration)**
 
@@ -305,7 +305,7 @@ console.log(multiplicar(4, 5)); // Saída: 20
 
 ```
 
-### Parâmetros e Argumentos
+#### Parâmetros e Argumentos
 
 - **Parâmetros** são as variáveis que você define na declaração da função.
 - **Argumentos** são os valores que você passa para a função quando a chama.
@@ -320,7 +320,7 @@ exibirMensagem("Aprendendo JavaScript!"); // Saída: Aprendendo JavaScript!
 
 ```
 
-### Retorno de Funções
+#### Retorno de Funções
 
 Uma função pode retornar um valor usando a palavra-chave return. Quando uma função retorna um valor, você pode usá-lo na expressão que chamou a função.
 
@@ -335,7 +335,7 @@ console.log(area); // Saída: 25
 
 ```
 
-### Funções como Objetos
+#### Funções como Objetos
 
 Em JavaScript, funções são objetos de primeira classe, o que significa que podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções.
 
@@ -349,7 +349,7 @@ executar(() => console.log("Função executada!")); // Saída: Função executad
 
 ```
 
-### Funções Recursivas
+#### Funções Recursivas
 
 Uma função pode chamar a si mesma. Isso é conhecido como recursão.
 
@@ -366,7 +366,7 @@ console.log(fatorial(5)); // Saída: 120
 
 ```
 
-#### Métodos nativos úteis para se trabalhar com funções.
+### Métodos nativos úteis para se trabalhar com funções.
 
 - **call()**
   
@@ -577,7 +577,7 @@ Esses métodos fornecem uma base sólida para trabalhar com funções em JavaScr
 
 ---
 
-# Orientação a Objeto-JavaScript
+## Orientação a Objeto-JavaScript
 
 #### Minhas anotações
 
@@ -588,7 +588,7 @@ Um objeto é uma coleção de propriedades, onde cada propriedade é uma associa
 
 ### Funções importantes da classe ***Object***
 
-### Object.keys(obj)
+#### Object.keys(obj)
 
 A função **Object.keys(obj)** é um método em JavaScript que retorna um array contendo as chaves (propriedades enumeráveis) de um objeto
 
@@ -618,7 +618,7 @@ console.log(chaves); // ['nome', 'idade', 'cidade']
 
 ```
 
-### Object.values(obj)
+#### Object.values(obj)
 
 A função **Object.values(obj)** é um método em JavaScript que retorna um array contendo os valores das propriedades enumeráveis de um objeto.
 
@@ -649,7 +649,7 @@ console.log(valores); // ['João', 30, 'São Paulo']
 
 ```
 
-### Object.entries(obj)
+#### Object.entries(obj)
 
 A função **Object.entries(obj)** é um método em JavaScript que retorna um array de arrays, onde cada sub-array contém um par chave-valor de um objeto.
 
@@ -681,7 +681,7 @@ console.log(entradas);
 
 ```
 
-### Object.defineProperty(obj, prop, descriptor)
+#### Object.defineProperty(obj, prop, descriptor)
 
 A função **Object.defineProperty(obj, prop, descriptor)** é um método em JavaScript que permite definir uma nova propriedade em um objeto ou modificar uma propriedade existente, configurando atributos específicos dessa propriedade através de um objeto de descritor.
 
@@ -733,7 +733,7 @@ console.log(pessoa.nome); // undefined
 
 ```
 
-### Object.assign(target, ...sources)
+#### Object.assign(target, ...sources)
 
 O **Object.assign** é um método que é usado para copiar as propriedades de um ou mais objetos para um objeto de destino. Ele é muito útil para a criação de novos objetos a partir de objetos existentes, facilitando a combinação de propriedades e a criação de cópias de objetos.
 
@@ -759,7 +759,7 @@ console.log(resultado); // { a: 1, b: 3, c: 4 }
 
 ```
 
-### Object.freeze(obj)
+#### Object.freeze(obj)
 
 A função **Object.freeze(obj)** é um método em JavaScript que congela um objeto, tornando-o imutável. Isso significa que você não pode adicionar, remover ou modificar suas propriedades depois que o objeto foi congelado.
 
@@ -795,7 +795,7 @@ console.log(pessoa); // { nome: 'João', idade: 30 }
 
 ```
 
-### Object.seal(obj)
+#### Object.seal(obj)
 
 A **função Object.seal(obj)** é um método em JavaScript que "sele" um objeto, permitindo que suas propriedades existentes sejam modificadas, mas impedindo que novas propriedades sejam adicionadas ou que propriedades existentes sejam removidas. 
 
@@ -832,7 +832,7 @@ console.log(pessoa); // { nome: 'João', idade: 31 }
 
 ```
 
-### Object.getOwnPropertyNames(obj)
+#### Object.getOwnPropertyNames(obj)
 
 A **função Object.getOwnPropertyNames(obj)** é um método em JavaScript que retorna um array contendo os nomes (chaves) de todas as propriedades de um objeto, tanto as enumeráveis quanto as não enumeráveis. 
 
@@ -865,7 +865,7 @@ console.log(propriedades); // ['nome', 'idade', 'cpf']
 
 ```
   
-### Object.getPrototypeOf(obj)
+#### Object.getPrototypeOf(obj)
 
 A função Object.getPrototypeOf(obj) é um método em JavaScript que retorna o protótipo do objeto especificado. O protótipo é o objeto a partir do qual o objeto dado herda suas propriedades e métodos.
 
@@ -896,15 +896,15 @@ console.log(prototipo); // { ... } (prototipo padrão do objeto)
 
 ---
 
-# Array-JavaScript
+## Array-JavaScript
 
-#### Minhas anotações
+**Minhas anotações**
 
 ## Conceito
 
 Um array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável. Os elementos de um array podem ser de diferentes tipos, como números, strings, objetos e até outros arrays.
 
-### Como criar um array
+#### Como criar um array
 
 - Usando colchetes[]:
 
@@ -1101,6 +1101,7 @@ O localStorage é outra **API** de armazenamento web do JavaScript, que permite 
 
 
 # Dominando-o-React
+
 Aqui deixarei minhas anotações do estudo da biblioteca React
 
 ---
