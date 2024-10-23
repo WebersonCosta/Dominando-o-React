@@ -470,6 +470,20 @@ const intervalId = setInterval(() => console.log('Repetindo'), 1000);
 clearInterval(intervalId); // Interrompe o intervalo
 
 ```
+- preventDefault()
+
+preventDefault é um método em JavaScript usado para evitar o comportamento padrão de um evento. 
+
+Exemplo em um formulário: 
+
+```javascript
+
+const handleSubmit = (event) => {
+  event.preventDefault(); // Impede o envio do formulário
+  console.log("Formulário não enviado");
+};
+
+```
 
 - **Function.prototype.toString()**
 
