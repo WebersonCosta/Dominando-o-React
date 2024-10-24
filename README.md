@@ -262,7 +262,7 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 ## Funções-JavaScript
 
-#### Minhas anotações
+**Minhas anotações**
 
 ## Função
 
