@@ -968,7 +968,7 @@ arr.unshift(0); // arr é [0, 1, 2, 3]
 
 ```
 
-### Métodos de Iteração
+#### Métodos de Iteração
 
 - **forEach():** Executa uma função fornecida uma vez para cada elemento do array.
 
@@ -1006,7 +1006,7 @@ const sum = arr.reduce((acc, curr) => acc + curr, 0); // 6
 
 ```
 
-### Métodos de Busca e Localização
+#### Métodos de Busca e Localização
 
 - **find():** Retorna o valor do primeiro elemento do array que satisfaz a função de teste fornecida.
 
@@ -1046,7 +1046,7 @@ arr.reverse(); // [3, 2, 1]
 
 ```
 
-### Métodos de Criação de Novos Arrays
+#### Métodos de Criação de Novos Arrays
   
 - **slice():** Retorna uma cópia rasa de uma parte do array em um novo array.
 
@@ -1066,7 +1066,7 @@ arr.splice(1, 2, 5); // arr é [1, 5, 4]
 
 ```
 
-### Outros
+#### Outros
 
 - **concat():** Usado para unir dois ou mais arrays. Este método não altera os arrays existentes, mas retorna um novo array.
 
