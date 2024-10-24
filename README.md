@@ -1201,7 +1201,7 @@ return (
 
 ---
 
-## Hooks
+### Hooks
 
 Hooks são funções que permitem que você "conecte" o estado (*states*) e outras funcionalidades do React a componentes funcionais.
 
