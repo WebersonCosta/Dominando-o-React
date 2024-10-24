@@ -264,9 +264,6 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 **Minhas anotações**
 
-## Função
-
-
 Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
 
 #### Declaração de Funções
@@ -593,10 +590,7 @@ Esses métodos fornecem uma base sólida para trabalhar com funções em JavaScr
 
 ## Orientação a Objeto-JavaScript
 
-#### Minhas anotações
-
-## Objeto
-
+**Minhas anotações**
 
 Um objeto é uma coleção de propriedades, onde cada propriedade é uma associação entre uma chave (ou nome) e um valor. Os valores podem ser de qualquer tipo, incluindo outros objetos, funções (que são chamadas de métodos quando associadas a um objeto) e tipos primitivos.
 
@@ -914,8 +908,6 @@ console.log(prototipo); // { ... } (prototipo padrão do objeto)
 
 **Minhas anotações**
 
-## Conceito
-
 Um array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável. Os elementos de um array podem ser de diferentes tipos, como números, strings, objetos e até outros arrays.
 
 #### Como criar um array
@@ -936,7 +928,7 @@ const numeros = new Array(1, 2, 3, 4, 5);
 
 ```
 
-## Métodos importantes para manipular e interagir com um array
+### Métodos importantes para manipular e interagir com um array
 
 #### Métodos de Manipulação de Arrays
 
@@ -976,7 +968,7 @@ arr.unshift(0); // arr é [0, 1, 2, 3]
 
 ```
 
-#### Métodos de Iteração
+### Métodos de Iteração
 
 - **forEach():** Executa uma função fornecida uma vez para cada elemento do array.
 
@@ -1014,7 +1006,7 @@ const sum = arr.reduce((acc, curr) => acc + curr, 0); // 6
 
 ```
 
-#### Métodos de Busca e Localização
+### Métodos de Busca e Localização
 
 - **find():** Retorna o valor do primeiro elemento do array que satisfaz a função de teste fornecida.
 
@@ -1054,7 +1046,7 @@ arr.reverse(); // [3, 2, 1]
 
 ```
 
-#### Métodos de Criação de Novos Arrays
+### Métodos de Criação de Novos Arrays
   
 - **slice():** Retorna uma cópia rasa de uma parte do array em um novo array.
 
@@ -1074,7 +1066,7 @@ arr.splice(1, 2, 5); // arr é [1, 5, 4]
 
 ```
 
-#### Outros
+### Outros
 
 - **concat():** Usado para unir dois ou mais arrays. Este método não altera os arrays existentes, mas retorna um novo array.
 
@@ -1130,7 +1122,7 @@ O React é uma biblioteca JavaScript desenvolvida pelo Facebook para construir i
 
 O **npm (Node Package Manager)** é um gerenciador de pacotes para o ambiente *Node.js*. Ele permite que você instale, atualize e gerencie bibliotecas e dependências de *JavaScript* em seus projetos. O npm é uma ferramenta essencial para desenvolvedores que trabalham com *JavaScript*, pois facilita a inclusão de pacotes de código já prontos, como o *React* e suas dependências.
 
-#### Aqui estão algumas funcionalidades principais do npm:
+### Aqui estão algumas funcionalidades principais do npm:
 
 - **Instalação de Pacotes:** Você pode instalar pacotes de forma simples, usando o comando npm install nome-do-pacote. Isso adiciona a biblioteca ao seu projeto e a lista de dependências no arquivo package.json.
 
@@ -1148,7 +1140,7 @@ Ao iniciar um projeto com React, você normalmente usará o npm para instalar o 
 
 **JSX** é uma extensão de sintaxe para JavaScript que permite escrever elementos HTML dentro do JavaScript. Ele é frequentemente usado em aplicações React para descrever como a interface de usuário deve parecer.
 
-#### Aqui estão alguns pontos chave sobre JSX:
+### Aqui estão alguns pontos chave sobre JSX:
 
 - **Sintaxe Similar ao HTML:** Com JSX, você pode escrever código que se parece muito com HTML. Por exemplo:
 
@@ -1201,15 +1193,15 @@ return (
 
 ---
 
-### Hooks
+## Hooks
 
 Hooks são funções que permitem que você "conecte" o estado (*states*) e outras funcionalidades do React a componentes funcionais.
 
-## estado (*state*)
+#### estado (*state*)
 
 Em React, "estado" refere-se a dados que podem mudar ao longo do tempo. Quando o estado de um componente muda, o React re-renderiza o componente para refletir essas mudanças.
 
-## Previous states
+#### Previous states
 
 No React, cada componente pode ter um estado interno que controla suas características e comportamento. Quando você atualiza o estado de um componente, o React pode precisar saber qual era o estado anterior para calcular o novo estado ou para garantir que a atualização ocorra da maneira esperada. Isso é especialmente importante em situações onde o novo estado depende do estado anterior.
 
