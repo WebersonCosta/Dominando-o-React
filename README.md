@@ -1519,7 +1519,7 @@ useEffect(() => {
 
 ---
 
-#### O que é a Fetch API?
+## O que é a Fetch API?
 
 A Fetch API é uma interface nativa do JavaScript que permite fazer requisições HTTP (como GET, POST, PUT, DELETE) para acessar recursos externos, como APIs e servidores web. Ela substitui o antigo XMLHttpRequest e oferece uma maneira mais simples e moderna de interagir com dados no lado do cliente (front-end).
 
