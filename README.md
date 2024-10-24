@@ -1232,7 +1232,7 @@ const Counter = () => {
 
 ---
 
-## useState
+### useState
 
 #### Como utilizar adequadamente o *useState* em React
 
@@ -1342,7 +1342,7 @@ const [idade, setIdade] = useState(0);
 
 ---
 
-## useEffect
+### useEffect
 
 #### Como utilizar adequadamente o *useEffect* em React
 
