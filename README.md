@@ -6,8 +6,7 @@
 
 Template strings são definidas usando crases **(`)** em vez de aspas simples **(')** ou duplas **(")**.
 
-#### Interpolação de Variáveis
-
+**Interpolação de Variáveis**
 
 ```javacript
   const nome = "João";
@@ -23,7 +22,7 @@ Template strings são definidas usando crases **(`)** em vez de aspas simples **
 
 O operador ternário em JavaScript é uma forma concisa de fazer uma verificação condicional. Ele funciona como um atalho para a estrutura if...else
 
-#### Sintaxe
+**Sintaxe**
 
 ```javascript
   condição ? valorSeVerdadeiro : valorSeFalso;
@@ -42,7 +41,7 @@ O operador ternário em JavaScript é uma forma concisa de fazer uma verificaç�
 
 ```
 
-#### Explicação
+**Explicação**
 
 - **Condição:** idade >= 18
 - Se a condição for verdadeira, **podeDirigir** será **"Sim"**.
@@ -111,7 +110,7 @@ O objeto Math em JavaScript é uma coleção de propriedades e métodos matemát
 
 O destructuring (ou destruturação) é um recurso do JavaScript que permite extrair valores de arrays ou propriedades de objetos em variáveis distintas de forma mais concisa e legível.
 
-#### Conceito
+**Conceito**
 
 A destruturação facilita a extração de dados, reduzindo a quantidade de código necessária para acessar elementos de arrays ou propriedades de objetos. Em vez de acessar cada item ou propriedade individualmente, você pode fazer isso em uma única linha, o que torna o código mais claro e direto.
 
@@ -145,7 +144,7 @@ console.log(nomeCompleto); // 'Alice'
 console.log(anos); // 25
 
 ```
-#### Destructuring de Arrays
+**Destructuring de Arrays**
 
 A destruturação de arrays é semelhante. Você pode extrair elementos do array em variáveis separadas:
 
@@ -176,7 +175,7 @@ console.log(tres); // 3
 
 ```
 
-#### Vantagens do Destructuring
+**Vantagens do Destructuring**
 
 1. **Legibilidade:** O código se torna mais fácil de ler e entender.
 2. **Menos código:** Você escreve menos código para obter os mesmos resultados.
@@ -188,7 +187,7 @@ console.log(tres); // 3
 
 O **spread operator** (operador de espalhamento) em JavaScript é representado por três pontos (...) e é usado para expandir ou "espalhar" elementos de um array ou propriedades de um objeto em um novo contexto. Ele é bastante útil para copiar arrays ou objetos, combinar dados e passar argumentos em funções
 
-#### Exemplos de Uso
+**Exemplos de Uso**
 
 - Espalhando Elementos de um Array
 Você pode usar o spread operator para criar uma cópia de um array ou para combinar arrays:
@@ -266,7 +265,7 @@ JSON é um formato baseado em pares de chave-valor. Por exemplo:
 
 Uma função é um bloco de código projetado para executar uma tarefa específica. Você pode chamar uma função sempre que precisar executar essa tarefa.
 
-#### Declaração de Funções
+**Declaração de Funções**
 
 1. **Função Declarada (Function Declaration)**
 
@@ -302,7 +301,7 @@ console.log(multiplicar(4, 5)); // Saída: 20
 
 ```
 
-#### Parâmetros e Argumentos
+**Parâmetros e Argumentos**
 
 - **Parâmetros** são as variáveis que você define na declaração da função.
 - **Argumentos** são os valores que você passa para a função quando a chama.
@@ -317,7 +316,7 @@ exibirMensagem("Aprendendo JavaScript!"); // Saída: Aprendendo JavaScript!
 
 ```
 
-#### Retorno de Funções
+**Retorno de Funções**
 
 Uma função pode retornar um valor usando a palavra-chave return. Quando uma função retorna um valor, você pode usá-lo na expressão que chamou a função.
 
@@ -332,7 +331,7 @@ console.log(area); // Saída: 25
 
 ```
 
-#### Funções como Objetos
+**Funções como Objetos**
 
 Em JavaScript, funções são objetos de primeira classe, o que significa que podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções.
 
@@ -346,7 +345,7 @@ executar(() => console.log("Função executada!")); // Saída: Função executad
 
 ```
 
-#### Funções Recursivas
+**Funções Recursivas**
 
 Uma função pode chamar a si mesma. Isso é conhecido como recursão.
 
@@ -910,7 +909,7 @@ console.log(prototipo); // { ... } (prototipo padrão do objeto)
 
 Um array é uma estrutura de dados que permite armazenar múltiplos valores em uma única variável. Os elementos de um array podem ser de diferentes tipos, como números, strings, objetos e até outros arrays.
 
-#### Como criar um array
+**Como criar um array**
 
 - Usando colchetes[]:
 
