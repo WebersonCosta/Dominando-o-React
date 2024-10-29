@@ -1234,7 +1234,7 @@ const Counter = () => {
 
 ### useState
 
-#### Como utilizar adequadamente o *useState* em React
+**Como utilizar adequadamente o *useState* em React**
 
 O useState é um [hook](#Hooks) em React que permite adicionar e gerenciar estado em componentes funcionais. Ele retorna um array com dois elementos: o valor do estado atual e uma função para atualizar o estado.
 
@@ -1275,7 +1275,7 @@ function Contador() {
 1. const [contador, setContador] = useState(0);: Define uma variável de estado contador com valor inicial 0 e uma função setContador para atualizar esse estado.
 2. setContador(contador + 1): Atualiza o valor do estado contador somando 1 ao valor atual quando o botão for clicado.
 
-#### Atualização do estado
+**Atualização do estado**
 
 - **Substituição do valor:** O valor passado para a função de atualização (setEstado) substitui o valor anterior.
 
@@ -1299,7 +1299,7 @@ setContador((contadorAnterior) => contadorAnterior + 1);
 
 Nesse caso, setContador acessa o valor anterior (contadorAnterior) e o incrementa.
 
-#### Estado inicial dinâmico
+**Estado inicial dinâmico**
 
 Você pode usar uma função como argumento de useState para calcular o valor inicial apenas na primeira renderização. Isso é útil para cálculos mais complexos que não precisam ser reexecutados em cada renderização.
 
@@ -1313,7 +1313,7 @@ const [contador, setContador] = useState(() => calcularValorInicial());
 
 Aqui, calcularValorInicial() só será chamado na primeira vez que o componente for montado.
 
-#### Boas práticas ao usar *useState*
+**Boas práticas ao usar *useState***
 
 1. **Atualizações de estado são assíncronas:** O React não atualiza o estado instantaneamente. Ele "agenda" a atualização, e a nova renderização do componente ocorre na próxima execução do ciclo de vida.
 
@@ -1344,7 +1344,7 @@ const [idade, setIdade] = useState(0);
 
 ### useEffect
 
-#### Como utilizar adequadamente o *useEffect* em React
+**Como utilizar adequadamente o *useEffect* em React**
 
 O useEffect é um [hook](#Hooks) que permite realizar efeitos colaterais em componentes funcionais. Efeitos colaterais são operações que ocorrem fora do fluxo de renderização principal, como buscar dados de uma API, manipular o DOM diretamente, ou configurar timers.
 
@@ -1400,7 +1400,7 @@ function Componente() {
 2. **Dependências:** O efeito será reexecutado sempre que contador mudar, pois ele está listado no array de dependências ([contador]).
 3. **Função de limpeza:** Nesse exemplo, a função de limpeza não é necessária, mas é útil para situações como remoção de event listeners ou cancelamento de requisições de rede.
 
-#### Array de dependências
+**Array de dependências**
 
 O array de dependências controla quando o *useEffect* é disparado:
 
@@ -1434,7 +1434,7 @@ useEffect(() => {
 
 ```
 
-#### Função de limpeza (Cleanup)
+**Função de limpeza (Cleanup)**
 
 A função de limpeza é opcional, mas extremamente útil em situações onde você precisa limpar ou cancelar algo quando o componente é desmontado ou o efeito é reexecutado. Um exemplo comum é limpar assinaturas de eventos ou cancelar timers.
 
@@ -1453,7 +1453,7 @@ useEffect(() => {
 
 ```
 
-#### Casos comuns de uso do *useEffect*
+**Casos comuns de uso do *useEffect***
 
 1. Busca de dados em APIs:
 
@@ -1501,7 +1501,7 @@ useEffect(() => {
 
 ```
 
-#### Boas práticas ao usar *useEffect*
+**Boas práticas ao usar *useEffect***
 
 1. **Gerenciar dependências corretamente:** Sempre inclua no array de dependências todas as variáveis que são usadas no corpo do useEffect. Isso previne bugs, como trabalhar com valores desatualizados.
 
@@ -1517,11 +1517,12 @@ A Fetch API é uma interface nativa do JavaScript que permite fazer requisiçõe
 
 A Fetch API trabalha de maneira assíncrona, ou seja, você pode solicitar dados a uma API e continuar executando outras tarefas enquanto espera pela resposta. Ela usa Promises, o que facilita o tratamento de sucesso e falha de uma requisição.
 
-#### Como Funciona?
+**Como Funciona?**
 
 A fetch() retorna uma Promise que será resolvida quando a resposta da requisição estiver disponível. Esse fluxo assíncrono permite que você faça requisições sem travar a interface do usuário, o que é essencial para criar experiências fluidas em aplicativos.
 
-**Estrutura básica:**
+- **Estrutura básica:**
+
 ```javascript
 
 fetch('URL-da-API')
@@ -1531,7 +1532,7 @@ fetch('URL-da-API')
 
 ```
 
-#### Conceitos Importantes:
+**Conceitos Importantes:**
 
 1. URL: O primeiro argumento do fetch() é a URL da API ou recurso que você deseja acessar.
 
@@ -1553,7 +1554,7 @@ fetch('https://exemplo.com/api', {
 
 4. Promises: fetch() retorna uma Promise, que permite que você encadeie .then() para lidar com a resposta assíncrona ou .catch() para lidar com erros, como falhas na rede.
 
-#### Exemplo Prático com Fetch API
+**Exemplo Prático com Fetch API**
 
 Aqui está um exemplo em React de como usar o fetch() para fazer uma requisição GET e exibir dados de uma API:
 
@@ -1604,7 +1605,7 @@ export default App;
 
 ```
 
-#### Passo a Passo do Exemplo:
+**Passo a Passo do Exemplo:**
 
 1. useState: Três estados são usados:
 
@@ -1622,16 +1623,110 @@ export default App;
 
 4. Renderização Condicional: Exibe uma mensagem de carregamento, uma mensagem de erro ou os dados da API dependendo do estado atual.
 
-#### Vantagens da Fetch API
+**Vantagens da Fetch API**
 
 - **Simples de usar:** A Fetch API tem uma sintaxe concisa e é fácil de aprender.
 - **Baseada em Promises:** Faz com que o código seja mais legível e fácil de manter.
 - **Nativa do JavaScript:** Não requer bibliotecas externas.
 
-#### Limitações da Fetch API
+**Limitações da Fetch API**
 
 - **Faltam algumas funcionalidades:** O fetch() não faz automaticamente a conversão de respostas JSON, e o manuseio de erros é um pouco mais manual.
 - **Não aborta requisições facilmente:** Embora seja possível cancelar uma requisição com AbortController, isso requer um pouco mais de configuração.
 
-
 ------
+
+## React Router
+
+O React Router é uma biblioteca popular para o React que permite criar navegação e gerenciar rotas em uma aplicação de página única (SPA - Single Page Application). Em uma SPA, todo o conteúdo está em uma única página HTML, e a navegação é gerenciada no front-end, sem recarregar a página completamente, o que resulta em uma experiência mais fluida para o usuário.
+
+**Conceitos Básicos do React Router**
+
+1. **Roteamento de SPA:** Em vez de fazer requisições para carregar novas páginas do servidor, o React Router altera o conteúdo visível na tela com base na rota da URL, sem recarregar a página. Isso é ideal para aplicações modernas onde a transição entre as páginas deve ser rápida.
+
+2. **Rota (Route):** Define qual componente deve ser renderizado para uma URL específica. Por exemplo, a rota /home pode exibir o componente HomePage, enquanto a rota /about exibe o componente AboutPage.
+
+3. **Navegação (Link):** No React Router, o componente <Link> substitui o <a> do HTML para navegação interna. Ele previne recarregamentos completos de página e usa o histórico de navegação do navegador para fazer a transição entre as rotas.
+
+4. **Switch/Routes:** O componente <Switch> (na versão 5) ou <Routes> (na versão 6) é usado para renderizar apenas a primeira rota que corresponda à URL atual, garantindo que apenas uma rota seja exibida por vez.
+
+**Quando Usar o React Router**
+
+Você deve usar o React Router quando precisa de navegação entre diferentes “páginas” ou seções em uma aplicação React, especialmente se ela é uma SPA. É útil para organizar o conteúdo, melhorar a experiência do usuário e permitir que ele navegue entre diferentes partes da aplicação sem recarregamentos.
+
+**Exemplo Prático**
+
+Vamos supor que você tem uma aplicação com três páginas: Home, About, e Contact. Aqui está uma configuração básica do React Router:
+
+1. Instalação:
+
+```javascript
+
+  npm install react-router-dom
+
+```
+2. Configuração do Router:
+
+Crie um arquivo App.js e importe os componentes necessários do React Router:
+
+```javascript
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './HomePage';
+import AboutPage from './AboutPage';
+import ContactPage from './ContactPage';
+
+function App() {
+  return (
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+```
+
+3. Criando Componentes para Cada Página:
+
+Crie cada uma das páginas (exemplo para HomePage.js):
+
+```javascript
+
+import React from 'react';
+
+function HomePage() {
+  return <h1>Home Page</h1>;
+}
+
+export default HomePage;
+
+```
+
+Repita esse processo para AboutPage.js e ContactPage.js, alterando o conteúdo conforme necessário.
+
+**Como Funciona**
+
+1. **Router:** O componente <Router> (aqui usando BrowserRouter) envolve toda a aplicação, permitindo o uso de rotas internas.
+
+2. **Link:** Os componentes <Link> gerenciam a navegação interna sem recarregar a página. Por exemplo, ao clicar no link "About", o React Router intercepta a navegação e carrega o componente AboutPage sem recarregar a página.
+
+3. **Routes e Route:** O <Routes> define um conjunto de rotas. O <Route> especifica o caminho da URL (path) e o componente a ser exibido (element) para aquela rota.
+
+**Benefícios do React Router**
+
+- **Experiência de usuário melhorada:** A navegação é mais rápida.
+- **URLs amigáveis:** URLs descritivas ajudam na organização e na acessibilidade.
+- **Histórico de navegação:** O histórico do navegador é utilizado, permitindo o uso dos botões "voltar" e "avançar".
