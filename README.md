@@ -1729,3 +1729,85 @@ Repita esse processo para AboutPage.js e ContactPage.js, alterando o conteúdo c
 - **Experiência de usuário melhorada:** A navegação é mais rápida.
 - **URLs amigáveis:** URLs descritivas ajudam na organização e na acessibilidade.
 - **Histórico de navegação:** O histórico do navegador é utilizado, permitindo o uso dos botões "voltar" e "avançar".
+
+---
+
+## useParams
+
+**Como utilizar adequadamente o useParams em React**
+
+O useParams é um hook do React Router que permite acessar parâmetros dinâmicos da URL em componentes funcionais. Ele é útil para capturar valores variáveis, como IDs ou nomes, a partir de rotas que mudam dinamicamente.
+
+**Sintaxe básica:**
+```javascript
+
+import { useParams } from "react-router-dom";
+
+const params = useParams();
+
+```
+
+- **useParams():** Retorna um objeto onde cada chave representa um parâmetro definido na rota dinâmica, e o valor é o segmento correspondente da URL.
+
+**Exemplo básico:**
+
+Imagine que você está criando uma aplicação onde cada post pode ser acessado por um ID na URL, como /post/123. Para configurar essa rota dinâmica, defina a rota com :id como parâmetro.
+
+```javascript
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Post from "./Post";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/post/:id" element={<Post />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
+
+```
+
+Em seguida, no componente Post, você pode utilizar useParams para capturar o valor do id.
+
+```javascript
+
+import { useParams } from "react-router-dom";
+
+function Post() {
+  const { id } = useParams();
+
+  return (
+    <div>
+      <h1>Post ID: {id}</h1>
+      {/* Aqui você poderia buscar dados do post usando o ID */}
+    </div>
+  );
+}
+
+export default Post;
+
+```
+**Explicação:**
+
+- const { id } = useParams();: O objeto retornado por useParams possui a chave id, que armazena o valor correspondente ao segmento da URL (ex: 123 em /post/123).
+
+-Esse valor id pode ser usado para buscar dados do post, exibir conteúdo específico ou realizar outras operações no componente.
+
+**Casos de uso comuns para useParams**
+
+- **Busca de dados dinâmicos:** Usar o parâmetro capturado para buscar informações específicas, como dados de uma API.
+
+- **URLs amigáveis:** Criar URLs que representem o conteúdo exibido, como /produto/:produtoId.
+
+- **Filtros e categorias:** Utilizar parâmetros para definir categorias ou filtros, como /blog/categoria/tecnologia.
+
+**Boas práticas ao usar useParams**
+
+- **Verificação de parâmetros:** Verifique se os parâmetros estão definidos antes de usá-los, para evitar erros em casos de URLs incorretas.
+
+- **Evite uso excessivo:** Use useParams apenas em componentes que realmente dependem de parâmetros da URL, evitando seu uso desnecessário.
