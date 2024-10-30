@@ -1732,7 +1732,7 @@ Repita esse processo para AboutPage.js e ContactPage.js, alterando o conteúdo c
 
 ---
 
-## useParams
+### useParams
 
 **Como utilizar adequadamente o useParams em React**
 
