@@ -1616,7 +1616,7 @@ export default App;
 
 3. fetch:
 
-- Requisição é feita para o endpoint da API https://jsonplaceholder.typicode.com/posts.
+- Requisição é feita para o endpoint da API [visitar.](https://jsonplaceholder.typicode.com/posts)
 - Os dados são convertidos para JSON com response.json() e armazenados no estado dados.
 - Caso ocorra um erro, ele é capturado no bloco catch e armazenado no estado erro.
 
