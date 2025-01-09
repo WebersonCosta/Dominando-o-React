@@ -1341,6 +1341,14 @@ const [idade, setIdade] = useState(0);
 
 ---
 
+### useReducer
+
+**Como utilizar adequadamente o *useReducer* em React**
+
+O useReducer em React é um [hook](#Hooks) utilizado para gerenciar estados mais complexos em componentes funcionais. Ele é uma alternativa ao useState, especialmente quando o estado tem múltiplas transições ou depende de ações específicas.
+
+---
+
 ### useEffect
 
 **Como utilizar adequadamente o *useEffect* em React**
