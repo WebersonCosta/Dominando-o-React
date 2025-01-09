@@ -1347,6 +1347,143 @@ const [idade, setIdade] = useState(0);
 
 O useReducer em React é um [hook](#Hooks) utilizado para gerenciar estados mais complexos em componentes funcionais. Ele é uma alternativa ao useState, especialmente quando o estado tem múltiplas transições ou depende de ações específicas.
 
+**Sintaxe básica:**
+
+```javascript
+
+const [estado, dispatch] = useReducer(reducer, estadoInicial);
+
+```
+- **estado:** O valor atual do estado.
+- **dispatch:** Uma função que dispara ações para modificar o estado.
+- **reducer:** Uma função que recebe o estado atual e a ação e retorna um novo estado.
+- **estadoInicial:** O valor inicial do estado.
+
+**Exemplo básico**
+
+Cenário: Contador com incremento e decremento
+
+```javascript
+
+import React, { useReducer } from "react";
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    case "reset":
+      return { count: 0 };
+    default:
+      throw new Error("Ação desconhecida");
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Contador: {state.count}</p>
+      <button onClick={() => dispatch({ type: "increment" })}>Incrementar</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>Decrementar</button>
+      <button onClick={() => dispatch({ type: "reset" })}>Resetar</button>
+    </div>
+  );
+}
+
+export default Counter;
+
+```
+
+**Explicação**
+  
+1. **reducer:** Define como o estado é modificado com base no tipo da ação.
+2. **initialState:** O estado inicial é um objeto com count: 0.
+3. **dispatch:** É usado para enviar ações que disparam mudanças no estado.
+
+**Casos de Uso Comuns**
+
+- **Estados complexos:** Quando o estado possui múltiplas propriedades.
+- **Transições dependentes de ações:** Se a lógica para atualizar o estado depende do tipo de ação.
+- **Evitar duplicação de lógica:** Quando várias funções alteram o estado de maneiras semelhantes.
+
+**Exemplo Avançado: Gerenciamento de Formulário**
+
+```javascript
+
+import React, { useReducer } from "react";
+
+const initialState = { name: "", email: "" };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "updateField":
+      return { ...state, [action.field]: action.value };
+    case "reset":
+      return initialState;
+    default:
+      throw new Error("Ação desconhecida");
+  }
+}
+
+function Form() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const handleChange = (e) => {
+    dispatch({
+      type: "updateField",
+      field: e.target.name,
+      value: e.target.value,
+    });
+  };
+
+  const handleReset = () => dispatch({ type: "reset" });
+
+  return (
+    <form>
+      <label>
+        Nome:
+        <input
+          name="name"
+          value={state.name}
+          onChange={handleChange}
+          placeholder="Digite seu nome"
+        />
+      </label>
+      <br />
+      <label>
+        Email:
+        <input
+          name="email"
+          value={state.email}
+          onChange={handleChange}
+          placeholder="Digite seu email"
+        />
+      </label>
+      <br />
+      <button type="button" onClick={handleReset}>
+        Resetar
+      </button>
+      <p>Dados: {JSON.stringify(state)}</p>
+    </form>
+  );
+}
+
+export default Form;
+
+```
+
+**Boas Práticas**
+
+1. **Manter o reducer puro:** Evite efeitos colaterais dentro da função redutora.
+2. **Estruturar ações:** Use uma estrutura clara e consistente para as ações (e.g., { type: "action", payload: data }).
+3. **Estado inicial bem definido:** Defina o estado inicial com todos os valores necessários.
+4. **Organizar o código:** Reduz a complexidade, principalmente em estados que lidam com múltiplos campos.
+
 ---
 
 ### useEffect
